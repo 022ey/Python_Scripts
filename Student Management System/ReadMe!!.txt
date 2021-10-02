@@ -1,0 +1,1 @@
+Please put all images in "C:" drive.
