@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/base.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="form-container">
+
+  <h1>There was an Error.</h1>
+
+  <div class="control">
+    <p>Please Enter all the fields!</p>
+    <p>
+      <a href="https://github.com/TheLazy-Dev/Discord-Text-Scarpper">Click here</a>
+      to learn how to use this tool.
+    </p>
+  </div>
+
+  <div class="control">
+  <input type="submit" class="btn" value="Go Back" onclick="window.location='{{url_for('index')}}'">
+  </div>
+
+</div>
+{% endblock %}

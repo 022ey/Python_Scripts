@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/base.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="form-container">
+            <h1>Discord Text Scraper</h1>
+        <form action="#" method="post">
+            <div class="control">
+            <label for="code">Auth Code</label>
+            <input type="text" id="code" name='code'>
+            </div>
+            <div class="control">
+            <label for="cid">Channel ID</label>
+            <input type="text" id="cid" name='cid'>
+            </div>
+            <div class="control">
+            <input type="submit" class="btn" value="Submit">
+            </div>
+        </form>
+        <p><a href="https://github.com/TheLazy-Dev/Discord-Text-Scarpper">How to use?</a></p>
+  </div>
+{% endblock %}
