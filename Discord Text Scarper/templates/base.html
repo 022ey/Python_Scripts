@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/base.css') }}">
+    <link rel= "icon" href= "{{ url_for('static',filename='styles/logo.png') }}">
+    <meta charset="utf-8">
+    <title>Discord Scraper</title>
+     {% block content %} {% endblock %}
+  </head>
+  <body>
+      <section>
+       {% block body %} {% endblock %}
+      </section>
+  </body>
+</html>
