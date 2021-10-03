@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[95]:
-
-
 from tkinter import*
 from datetime import date
 import tkinter.messagebox as msg
@@ -49,11 +43,3 @@ submit= Button(root,text="Submit",command=calculateAge)
 submit.place(x=300,y=450)
 
 root.mainloop()
-
-
-# In[ ]:
-
-
-
-Label(text=f"Name: {nameValue.get()}\n\nAge: {age} Years Old").place(x=500,y=300)
-
