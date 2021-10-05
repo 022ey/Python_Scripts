@@ -1,0 +1,5 @@
+When you run the program you have to mention the initial range and final range that you want to guess the number.
+After giving the range the game begins.
+You have to start guessing the number until its correct.
+The system will give hints like the guessed number is less or greater than the system generated number.
+You can make this more fun by givining a large range of number.
