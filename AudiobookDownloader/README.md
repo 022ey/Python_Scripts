@@ -25,6 +25,6 @@ These are the screenshots (Garuda Linux) :
 
 
 <p float="left">
-  <img src="/img/Screenshot0.png?raw=true" width="400" />
-  <img src="/img/Screenshot1.png?raw=true" width="400" /> 
+  <img src="https://raw.githubusercontent.com/jxtin/AudiobookDownloader/main/img/Screenshot0.png" width="400" />
+  <img src="https://raw.githubusercontent.com/jxtin/AudiobookDownloader/main/img/Screenshot1.png" width="400" /> 
 </p>
