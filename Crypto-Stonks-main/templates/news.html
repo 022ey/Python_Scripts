@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+    {% block content %}
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/news.css') }}">
+      <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/base.css') }}">
+      <title>News</title>
+   {% endblock %}
+   {% block body %}
+  <div class="flex-container">
+
+    {% for news in news %}
+      <div class="news-card">
+        <img src="{{ news.Image }}">
+        <div class="headline">
+          {{ news.Headline }}
+        </div>
+
+          <div class="date">
+            {{ news.Date }}
+          </div>
+          <div class='button' id="bottom">
+          <a href="{{ news.Link }}" target="_blank" class="cta" herf="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Read More
+          </a>
+          </div>
+
+      </div>
+        {% endfor %}
+    </div>
+
+  {% endblock %}

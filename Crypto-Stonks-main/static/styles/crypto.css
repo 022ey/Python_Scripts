@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height:100vh;
+  background:#03040e;
+  color:#fff;
+  width:100%;
+  font-family:"Open Sans",sans-serif;
+}
+
+.main-container{
+  display: flex;
+}
+
+/*CHART STYLING*/
+.chart-container{
+  width: 1000;
+  height: 550;
+  margin: 10px;
+  box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.4);
+}
+
+/*details box styling*/
+/*
+.coin-details{
+  color: #fff !important;
+  width: 400;
+  height: 550;
+  margin: 10px;
+  transition: all 0.4s ease 0s;
+  box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.4);
+}
+*/
+
+.coin-details {
+  width: 400;
+  height: 550;
+  margin: 10px;
+  background: #050612;
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.9);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.9);
+  box-shadow: 5px 40px -10px rgba(0,0,0,0.9);
+  transition: all 0.4s ease 0s;
+  overflow: auto;
+
+  /*Scrollbar for firefox*/
+  scrollbar-width: thin;
+  scrollbar-color: #4e4e4e #ddd;
+}
+
+.flex{
+  margin: 20px;
+  border: solid 1px #000;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  justify-content: space-between;
+  align-items: center;
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.9);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.9);
+  box-shadow: 5px 40px -10px rgba(0,0,0,0.9);
+
+}
+
+.flex hr{
+  width: 100%;
+  border:none
+}
+
+h2{
+  font-family:'Montserrat';
+  margin: 10px;
+  white-space:nowrap;
+  padding: 2%;
+  border-radius: 15%;
+  text-align:center;
+  font-weight: bold;
+}
+
+.left{
+  padding: 2%;
+  border-radius: 15%;
+  align: left
+}
+
+.right{
+  padding: 2%;
+  border-radius: 15%;
+  text-align : right
+}
+
+/* Chromium Based Scrollbar customisation*/
+.coin-details::-webkit-scrollbar {
+      width: 5px;
+   }
+
+.coin-details::-webkit-scrollbar-track {
+    background-color: black;
+  }
+
+.coin-details::-webkit-scrollbar-thumb {
+    background: #4e4e4e;
+    border-radius: 5px;
+  }
+/*-------*/

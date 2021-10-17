@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+    {% block content %}
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/crypto.css') }}">
+      <title>{{ name }}</title>
+   {% endblock %}
+    {% block body %}
+      <br>
+      <div class= "main-container">
+      <div class="chart-container">
+        <div id="tvchart" class="tv-chart"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/tv.js" ></script>
+            <script type="text/javascript">
+            new TradingView.widget(
+            {
+              "autosize": true,
+              "symbol": "{{ ticker }}",
+              "timezone": "Asia/Kolkata",
+              "theme": "dark",
+              "style": "1",
+              "locale": "en",
+              "toolbar_bg": "#f1f3f6",
+              "enable_publishing": false,
+              "withdateranges": true,
+              "range": "3M",
+              "hide_side_toolbar": false,
+              "details": false,
+              "container_id": "tvchart"
+            });
+          </script>
+      </div>
+
+      <div class="coin-details"> <h2>{{dic.name}} Price Statistics</h2>
+
+          <div class="flex">
+            <div class="left">Market Rank</div><div class="right">{{dic.market_cap_rank}}</div>
+          </div>
+
+          <div class="flex">
+            <div class="left">{{dic.name}} Price</div><div class="right">{{dic.current_price}} $</div>
+          </div>
+
+          <div class="flex" style="flex-flow: wrap">
+            <div class="left">Price Change (24H)</div>
+            {%  if dic.price_change_percentage_1h_in_currency > 0 %}
+            <div class="right"><font color="green">{{dic.price_change_24h|round(1, 'floor')}} $</font></div>
+            {% else %}
+            <div class="right"><font color="red">{{dic.price_change_24h|round(1, 'floor')}} $</font></div>
+            {% endif %}
+            <hr>
+            <div class="left">Price Change % (24H)</div>
+            {%  if dic.price_change_percentage_1h_in_currency > 0 %}
+            <div class="right"><font color="green">{{dic.price_change_percentage_24h|round(1, 'floor')}}</font></div>
+            {% else %}
+            <div class="right"><font color="red">{{dic.price_change_percentage_24h|round(1, 'floor')}} %</font></div>
+            {% endif %}
+          </div>
+
+          <div class="flex" style="flex-flow: wrap">
+            <div class="left">Market Cap</div><div class="right">{{dic.market_cap}} $</div>
+            <hr>
+            <div class="left"></div>
+            {% if dic.market_cap_change_percentage_24h > 0 %}
+            <div class="right"><font color="green">{{dic.market_cap_change_percentage_24h|round(1, 'floor')}} $</font></div>
+            {% else %}
+            <div class="right"><font color="red" >{{dic.market_cap_change_percentage_24h|round(1, 'floor')}} $</font></div>
+            {% endif %}
+          </div>
+
+          <div class="flex">
+            <div class="left">Total Volume</div><div class="right">{{dic.total_volume}} $</div>
+          </div>
+
+          <div class="flex" style="flex-flow: wrap">
+            <div class="left">24h Low</div><div class="right">{{dic.low_24h}} $</div>
+            <hr>
+            <div class="left">24h High</div><div class="right">{{dic.high_24h}} $</div>
+          </div>
+
+          <div class="flex" style="flex-flow: wrap">
+            <div class="left">Circulating Supply</div><div class="right">{{dic.circulating_supply}} $</div>
+            <hr>
+            <div class="left">Total Supply (24H)</div><div class="right">{{dic.total_supply}} $</div>
+            <hr>
+            <div class="left">Max Supply</div><div class="right">{{dic.max_supply}} $</div>
+          </div>
+      </div>
+    </div>
+        {% endblock %}
+      <!-- TradingView Widget END -->

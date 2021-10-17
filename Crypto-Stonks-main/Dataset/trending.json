@@ -1,0 +1,110 @@
+{
+  "coins": [
+    {
+      "item": {
+        "id": "feg-token",
+        "coin_id": 13878,
+        "name": "FEG Token",
+        "symbol": "FEG",
+        "market_cap_rank": 105,
+        "thumb": "https://assets.coingecko.com/coins/images/13878/thumb/fav200.png?1619597015",
+        "small": "https://assets.coingecko.com/coins/images/13878/small/fav200.png?1619597015",
+        "large": "https://assets.coingecko.com/coins/images/13878/large/fav200.png?1619597015",
+        "slug": "feg-token",
+        "price_btc": 4.838715174171588e-13,
+        "score": 0
+      }
+    },
+    {
+      "item": {
+        "id": "matic-network",
+        "coin_id": 4713,
+        "name": "Polygon",
+        "symbol": "MATIC",
+        "market_cap_rank": 15,
+        "thumb": "https://assets.coingecko.com/coins/images/4713/thumb/matic___polygon.jpg?1612939050",
+        "small": "https://assets.coingecko.com/coins/images/4713/small/matic___polygon.jpg?1612939050",
+        "large": "https://assets.coingecko.com/coins/images/4713/large/matic___polygon.jpg?1612939050",
+        "slug": "polygon",
+        "price_btc": 0.00005198983589158086,
+        "score": 1
+      }
+    },
+    {
+      "item": {
+        "id": "livepeer",
+        "coin_id": 7137,
+        "name": "Livepeer",
+        "symbol": "LPT",
+        "market_cap_rank": 112,
+        "thumb": "https://assets.coingecko.com/coins/images/7137/thumb/logo-circle-green.png?1619593365",
+        "small": "https://assets.coingecko.com/coins/images/7137/small/logo-circle-green.png?1619593365",
+        "large": "https://assets.coingecko.com/coins/images/7137/large/logo-circle-green.png?1619593365",
+        "slug": "livepeer",
+        "price_btc": 0.0007567537535895704,
+        "score": 2
+      }
+    },
+    {
+      "item": {
+        "id": "tenset",
+        "coin_id": 14629,
+        "name": "Tenset",
+        "symbol": "10SET",
+        "market_cap_rank": 135,
+        "thumb": "https://assets.coingecko.com/coins/images/14629/thumb/10set.png?1617353812",
+        "small": "https://assets.coingecko.com/coins/images/14629/small/10set.png?1617353812",
+        "large": "https://assets.coingecko.com/coins/images/14629/large/10set.png?1617353812",
+        "slug": "tenset",
+        "price_btc": 0.00014115051365397706,
+        "score": 3
+      }
+    },
+    {
+      "item": {
+        "id": "shiba-inu",
+        "coin_id": 11939,
+        "name": "Shiba Inu",
+        "symbol": "SHIB",
+        "market_cap_rank": 29,
+        "thumb": "https://assets.coingecko.com/coins/images/11939/thumb/SHIBLOGO.png?1600752116",
+        "small": "https://assets.coingecko.com/coins/images/11939/small/SHIBLOGO.png?1600752116",
+        "large": "https://assets.coingecko.com/coins/images/11939/large/SHIBLOGO.png?1600752116",
+        "slug": "shiba-inu",
+        "price_btc": 2.289247824230573e-10,
+        "score": 4
+      }
+    },
+    {
+      "item": {
+        "id": "julswap",
+        "coin_id": 13839,
+        "name": "JulSwap",
+        "symbol": "JULD",
+        "market_cap_rank": 704,
+        "thumb": "https://assets.coingecko.com/coins/images/13839/thumb/JULD3_%282%29.png?1612250301",
+        "small": "https://assets.coingecko.com/coins/images/13839/small/JULD3_%282%29.png?1612250301",
+        "large": "https://assets.coingecko.com/coins/images/13839/large/JULD3_%282%29.png?1612250301",
+        "slug": "julswap",
+        "price_btc": 0.0000012675055151898026,
+        "score": 5
+      }
+    },
+    {
+      "item": {
+        "id": "polydoge",
+        "coin_id": 15146,
+        "name": "PolyDoge",
+        "symbol": "POLYDOGE",
+        "market_cap_rank": 793,
+        "thumb": "https://assets.coingecko.com/coins/images/15146/thumb/p1kSco1h_400x400.jpg?1619842715",
+        "small": "https://assets.coingecko.com/coins/images/15146/small/p1kSco1h_400x400.jpg?1619842715",
+        "large": "https://assets.coingecko.com/coins/images/15146/large/p1kSco1h_400x400.jpg?1619842715",
+        "slug": "polydoge",
+        "price_btc": 4.625576490973679e-13,
+        "score": 6
+      }
+    }
+  ],
+  "exchanges": []
+}

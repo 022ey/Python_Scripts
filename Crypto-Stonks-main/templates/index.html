@@ -1,0 +1,197 @@
+<html>
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/index.css') }}">
+<html lang="en">
+    <head>
+      <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/nav.css') }}">
+      <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>CRYPTO STONKS</title>
+    </head>
+    <body>
+      <header>
+       <a href="{{url_for('main')}}">
+        <img class="logo" src="images/logo.svg" alt="logo">
+       </a>
+      <nav>
+        <ul class="nav_links" style="white-space:nowrap;">
+          <li><a href="{{url_for('crypto',name= 'Bitcoin', rank='1')}}">Crypto Charts</a></li>
+          <li><a href="{{url_for('news')}}">News</a</li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Learn</a></li>
+        </ul>
+      </nav>
+      <a class="cta" herf="#">
+       <span class="cts"></span>
+       <span class="cts"></span>
+       <span class="cts"></span>
+       <span class="cts"></span>
+        Contact
+      </a>
+    </header>
+    <hr />
+      <!--TICKER TAPE START-->
+      <div class="tickertape-container" style="background-color:#050612">
+        <div class="tickertape-container__widget" ></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+        {
+        "symbols": [
+          {"proName": "BITSTAMP:BTCUSD",
+            "title": "BTC/USD"},
+          {"proName": "BITSTAMP:ETHUSD",
+            "title": "ETH/USD"},
+          {"description": "ADA/USDT",
+            "proName": "BINANCE:ADAUSDT"},
+          {"description": "MATIC/USDT",
+            "proName": "BINANCE:MATICUSDT"},
+          {"description": "BNB/USD",
+            "proName": "BINANCE:BNBUSD"}
+        ],
+        "showSymbolLogo": true,
+        "colorTheme": "dark",
+        "isTransparent": true,
+        "displayMode": "adaptive",
+        "locale": "en"
+      }
+        </script>
+      </div>
+    <!--TICKER TAPE ENDS-->
+      <hr />
+      <div class= "table-container" style="padding:0px 20px;">
+          <table class="table">
+            <thead>
+              <tr align=Right style="white-space:nowrap;">
+                  <th><th>
+                  <th align=Left>Coin</th>
+                  <th>Price $</th>
+                  <th>1 Hour</th>
+                  <th>24 Hours</th>
+                  <th>7 Days</th>
+                  <th>24h Volume</th>
+                  <th>Market Cap</th>
+                  <th>Last 7 days</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <!--WIDGETS START-->
+              <div class="flex-container">
+
+              <!-- TIMELINE-->
+              <div class="timeline-container">
+                <div class="timeline-container__widget"></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>
+                {
+                "symbol": "BINANCE:BTCUSD",
+                "symbol": "COINBASE:ETHUSD",
+                "colorTheme": "dark",
+                "isTransparent": true,
+                "largeChartUrl": "",
+                "displayMode": "regular",
+                "width": "400",
+                "height": "450",
+                "locale": "en"
+                }
+                </script>
+              </div>
+
+              <!--OVERVIEW-->
+              <div class="overview-container">
+                <div class="overview-container__widget"></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
+                {
+                "colorTheme": "dark",
+                "dateRange": "3M",
+                "showChart": true,
+                "locale": "en",
+                "largeChartUrl": "",
+                "isTransparent": true,
+                "showSymbolLogo": true,
+                "width": "400",
+                "height": "450",
+                "plotLineColorGrowing": "rgba(25, 118, 210, 1)",
+                "plotLineColorFalling": "rgba(25, 118, 210, 1)",
+                "gridLineColor": "rgba(42, 46, 57, 1)",
+                "scaleFontColor": "rgba(120, 123, 134, 1)",
+                "belowLineFillColorGrowing": "rgba(33, 150, 243, 0.12)",
+                "belowLineFillColorFalling": "rgba(33, 150, 243, 0.12)",
+                "symbolActiveColor": "rgba(33, 150, 243, 0.12)",
+                "tabs": [
+                  {
+                    "title": "CRYPTO",
+                    "symbols": [
+                      { "s": "BINANCE:BTCUSDT",
+                        "d": "UNISWAP"},
+                      {"s": "BINANCE:ETHUSDT",
+                        "d": "BINANCE"},
+                      {"s": "BINANCE:MATICUSDT",
+                        "d": "BINANCE"}
+                    ],
+                    "originalTitle": "Indices"}]}
+                </script>
+              </div>
+
+              <!--TA INDICATOR-->
+              <div class="indicator-container">
+                <div class="indicator-container__widget" ></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js" async>
+                {
+                "interval": "1m",
+                "width": "400",
+                "isTransparent": true,
+                "height": "450",
+                "symbol": "BINANCE:MATICUSDT",
+                "showIntervalTabs": true,
+                "locale": "en",
+                "colorTheme": "dark"
+              }
+                </script>
+              </div>
+
+              <!--DYNAMIC TABLE ROWS-->
+                {% for data in data %}
+
+                  <tr align=Right style="white-space:nowrap;" class="row" onclick="window.location='{{url_for('crypto',name= data.name, rank=data.market_cap_rank)}}'" >
+                  <td><img src="{{ data.image }}" width="40" height="40"></td>
+                  <td></td>
+
+                  <td data-label="coin" align=Left style="white-space:nowrap">
+                    <div>{{ data.name }}</div>
+                    <div>({{ data.symbol}})</div>
+                  </td>
+
+                  <td data-label="Price">{{ data.current_price|round(2, 'floor') }} $</td>
+
+                  {% if data.price_change_percentage_1h_in_currency < 0 %}
+                  <td data-label="1 Hour"><font color="red">{{ data.price_change_percentage_1h_in_currency|round(1, 'floor') }} % </font></td>
+                  {% else %}
+                  <td data-label="1 Hour"><font color="green">{{ data.price_change_percentage_1h_in_currency|round(1, 'floor') }} % </font></td>
+                  {% endif %}
+
+                  {% if data.price_change_percentage_24h_in_currency < 0 %}
+                  <td data-label="24 Hours"><font color="red">{{ data.price_change_percentage_24h_in_currency|round(1, 'floor') }} % </font></td>
+                  {% else %}
+                  <td data-label="24 Hours"><font color="green">{{ data.price_change_percentage_1h_in_currency|round(1, 'floor') }} % </font></td>
+                  {% endif %}
+
+                  {% if data.price_change_percentage_7d_in_currency < 0 %}
+                  <td data-label="7 Days" ><font color="red">{{ data.price_change_percentage_7d_in_currency|round(1, 'floor') }} % </font></td>
+                  {% else %}
+                  <td data-label="7 Days"><font color="green">{{ data.price_change_percentage_7d_in_currency|round(1, 'floor') }} % </font></td>
+                  {% endif %}
+
+                  <td data-label="24h Volume">{{ data.total_volume }} $</td>
+                  <td data-label="Market Cap">{{ data.market_cap }} $</td>
+                  <td data-label="Last 7 days"><img src="https://www.coingecko.com/coins/{{ data.cid }}/sparkline" /><td>
+
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+
+      <script>
+         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js">
+  </script>
+    </body>
+</html>
