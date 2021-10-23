@@ -1,0 +1,6 @@
+# jpg
+*.jpg
+*.jpeg
+*.png
+*.pdf
+test.py
