@@ -32,18 +32,17 @@ for i in range(len(pdf_file)):
 
 
 #  to compress png and convert into JPEG
-# from PIL import Image
-# def png2jpg():
-#     directory = r'images'
-#     for f in os.listdir(directory):
-#         if f.endswith(".png"):
-#             im = Image.open(os.path.join(directory, f))
-#             name= os.path.splitext(os.path.join(directory, f))[0] +'.jpg'
-#             rgb_im = im.convert('RGB')
-#             rgb_im.save(name)
-#             print(os.path.join(directory, f))
-#             continue
-#         else:
-#             continue
+''' 
+from PIL import Image
+def png2jpg():
+    directory = r'Converted_img'
+    for f in os.listdir(directory):
+        if f.endswith(".png"):
+            im = Image.open(os.path.join(directory, f))
+            name= os.path.splitext(os.path.join(directory, f))[0] +'.jpg'
+            rgb_im = im.convert('RGB')
+            rgb_im.save(name)
+            # print(os.path.join(directory, f))
+png2jpg()
 
-# png2jpg()
+'''
